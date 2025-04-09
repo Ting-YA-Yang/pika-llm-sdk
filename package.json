@@ -1,0 +1,41 @@
+{
+  "name": "pika-llm-sdk",
+  "version": "1.0.0",
+  "description": "SDK for multiple LLM providers including deepseek, douban, kimi, chatGPT and llama",
+  "author": "Vicky Yang",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write \"src/**/*.ts\"",
+    "format:check": "prettier --check \"src/**/*.ts\"",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "build": "tsup",
+    "type-check": "tsc --noEmit",
+    "dev": "tsup --watch",
+    "test": "jest --passWithNoTests",
+    "test:watch": "jest --watch --passWithNoTests",
+    "test:coverage": "jest --coverage",
+    "clean": "rimraf dist",
+    "prebuild": "pnpm clean",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@types/jest": "^29.5.14",
+    "@typescript-eslint/eslint-plugin": "^8.29.1",
+    "@typescript-eslint/parser": "^8.29.1",
+    "eslint": "^9.24.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.6",
+    "husky": "^8.0.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.5.3",
+    "rimraf": "^6.0.1",
+    "ts-jest": "^29.3.1",
+    "tsup": "^8.4.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
